@@ -1,0 +1,44 @@
+<%= form_for(@achievement) do |f| %>
+  <% if @achievement.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@achievement.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+    <ul>
+      <% @achievement.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <%= form_for(@achievement) do |f| %>
+    <% if @achievement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@achievement.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% @achievement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="field">
+      <%= f.label :point_value %><br>
+      <%= f.number_field :point_value %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <%= link_to 'Delete this item', @achievement, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <% end %>
+
+
+  <% end %>

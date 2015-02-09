@@ -7,7 +7,7 @@
       <% Student.get_all_children_for_teacher_id( session[:teacher_id] ).each do |student| %>
         <tr><td><%=  student.name  %></td></tr>
         <tr>
-
+          <%= display_achievements(Achievement.all) %>
         </tr>
       <% end %>
   </tbody>

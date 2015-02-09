@@ -9,13 +9,12 @@ module ApplicationHelper
     end
   end
 
-  def display_grades(grades)
+  def display_achievements(achievements)
     result = ""
-    grades.each do |grade|
+    achievements.each do |achievement|
       result << "<tr>"
-      result << "<td>#{grade.assignment_name}</td>"
-      result << "<td>#{ grade.score }</td>"
-      result << "<td>#{ grade.due_on}</td>"
+      result << "<td>#{achievement.description}</td>"
+      result << "<td>#{ achievement.point_value }</td>"
       result << "</tr>"
     end
     result.html_safe
