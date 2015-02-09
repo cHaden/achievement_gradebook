@@ -253,3 +253,132 @@ Started GET "/login/login" for ::1 at 2015-02-09 14:13:56 -0500
 Processing by LoginController#login as HTML
   Rendered login/login.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 93ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to MakeAchievements (20150209200108)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to MakeAchievements (20150209200108)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "achievements_students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "achievement_id" integer, "student_id" integer) [0m
+  [1m[35m (1.9ms)[0m  DROP TABLE "grades"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150209200108"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateAchievements (20150209200530)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "achievements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "point_value" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150209200530"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/login/login" for ::1 at 2015-02-09 15:17:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LoginController#login as HTML
+  Rendered login/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 169ms (Views: 136.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-b59e204a3e126c51f893ffe303483b91.css?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/grades-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/parents-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/students-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/teachers-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started GET "/assets/application-e0915e1eb4c59ce700a2ef8fe932c748.js?body=1" for ::1 at 2015-02-09 15:17:33 -0500
+
+
+Started POST "/login/login" for ::1 at 2015-02-09 15:17:43 -0500
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdkT8xndcCFpm3Xm+eeIvMVXyFrl3SS8MxgIzV/4WMBAXrOm7D/AExYdNH2kM2w9iTdIGXIizrS+NhHNx3IgCA==", "email"=>"SusanSmith@higher.edu", "password"=>"[FILTERED]", "type"=>"", "commit"=>"login"}
+  [1m[35mParent Load (0.2ms)[0m  SELECT  "parents".* FROM "parents" WHERE "parents"."email" = ? LIMIT 1  [["email", "SusanSmith@higher.edu"]]
+  Rendered login/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 111ms (Views: 71.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application-b59e204a3e126c51f893ffe303483b91.css?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/turbolinks-da8ddad9c2c5483d4c5c30c1ce325253.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/grades-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/parents-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/students-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/teachers-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started GET "/assets/application-e0915e1eb4c59ce700a2ef8fe932c748.js?body=1" for ::1 at 2015-02-09 15:17:44 -0500
+
+
+Started POST "/login/login" for ::1 at 2015-02-09 15:17:53 -0500
+Processing by LoginController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vU+nHWBci9BjjYxTKICchOWMq0RsFrPaYoqCD90Cn0GYyAdIlb474hwLzch1VHgFqewrB/vpWdLvpJsPRYjniQ==", "email"=>"SusanSmith@higher.edu", "password"=>"[FILTERED]", "type"=>"Teacher", "commit"=>"login"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."email" = ? LIMIT 1[0m  [["email", "SusanSmith@higher.edu"]]
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 114ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/teachers" for ::1 at 2015-02-09 15:17:53 -0500
+Processing by TeachersController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  [1m[36mGrade Load (1.4ms)[0m  [1mSELECT "grades".* FROM "grades"[0m
+SQLite3::SQLException: no such table: grades: SELECT "grades".* FROM "grades"
+  Rendered teachers/index.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: grades: SELECT "grades".* FROM "grades"):
+     7:       <% Student.get_all_children_for_teacher_id( session[:teacher_id] ).each do |student| %>
+     8:         <tr><td><%=  student.name  %></td></tr>
+     9:         <tr>
+    10:           <% Grade.get_assignments_for_student_email( student.student_email ).each do |grade| %>
+    11:             <tr>
+    12:               <td><%= grade.assignment_name %></td>
+    13:               <td><%= grade.score %></td>
+  app/models/grade.rb:9:in `get_assignments_for_student_email'
+  app/views/teachers/index.html.erb:10:in `block in _app_views_teachers_index_html_erb__2674460131191578083_70245084086900'
+  app/views/teachers/index.html.erb:7:in `each'
+  app/views/teachers/index.html.erb:7:in `_app_views_teachers_index_html_erb__2674460131191578083_70245084086900'
+
+
+  Rendered /Users/Spoonflower/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/Spoonflower/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Spoonflower/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Spoonflower/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /Users/Spoonflower/.rvm/gems/ruby-2.2.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (83.0ms)
