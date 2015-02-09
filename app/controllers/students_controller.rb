@@ -3,7 +3,6 @@ class StudentsController < ApplicationController
 
   def index
     @student = Student.all
-    @grades = Grade.all
   end
 
   def new
