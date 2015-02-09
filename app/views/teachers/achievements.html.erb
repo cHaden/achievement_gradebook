@@ -2,9 +2,13 @@
 
 <table>
   <tbody>
-    <tr>
-      <%= display_achievements(Achievement.all) %>
-    </tr>
+    <% Achievement.all.each do |achievement| %>
+      <tr>
+        <td><%= check_box_tag "moo", true, true %></td>
+        <td><%= achievement.description %></td>
+        <td><%= achievement.point_value %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
