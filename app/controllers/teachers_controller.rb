@@ -4,12 +4,10 @@ class TeachersController < ApplicationController
 
   def index
     @teachers = Teacher.all
-    @grades = Grade.all
   end
 
   def new
     @teacher = Teacher.new
-    @grade = Grade.new
   end
 
   def edit
