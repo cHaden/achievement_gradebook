@@ -11,7 +11,9 @@ class TeachersController < ApplicationController
   end
 
   def edit
+  end
 
+  def achievements
   end
 
   def create

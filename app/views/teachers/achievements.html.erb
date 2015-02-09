@@ -1,0 +1,11 @@
+<h1>Teacher Dashboard</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <%= display_achievements(Achievement.all) %>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Back', teachers_path %>

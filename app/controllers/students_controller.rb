@@ -12,6 +12,9 @@ class StudentsController < ApplicationController
   def edit
   end
 
+  def achievements
+  end
+  
   def create
     @student = Student.new(student_params)
     respond_to do |format|
