@@ -2,7 +2,7 @@
 
 To use:
 
-Run rake db:seed to popular table with default values
+Run rake db:seed to populate table with default values
 
 Log in as a teacher to
 
