@@ -1,0 +1,17 @@
+<h1>Student Dashboard</h1>
+
+
+
+<%= form_tag update_achievements_student_path do %>
+  <% @achievements.each do |achievement| %>
+    <p>
+      <%= check_box_tag "achievements[#{achievement.id}]", true, @student.achievements.include?(achievement) %>
+      <%= achievement.description %>
+      <%= achievement.point_value %>
+    </p>
+  <% end %>
+<% end %>
+<%= submit_tag "Save Tags" %>
+
+
+<%= link_to 'Back', teachers_path %>

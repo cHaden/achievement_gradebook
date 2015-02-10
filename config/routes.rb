@@ -13,10 +13,22 @@ Rails.application.routes.draw do
   get 'teachers/achievements'
 
   resources :parents
-  resources :teachers
-  resources :students
+  resources :teachers do
+    member do
+      get 'edit_achievements'
+      post 'edit_achievements'
+      post 'update_achievements'
+    end
+  end
+  resources :students do
+    member do
+      get 'edit_achievements'
+      post 'edit_achievements'
+      post 'update_achievements'
+      get 'update_achievements'
+    end
+  end
   resources :achievements
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

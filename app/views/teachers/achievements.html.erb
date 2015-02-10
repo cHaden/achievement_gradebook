@@ -2,12 +2,22 @@
 
 <table>
   <tbody>
-    <% Achievement.all.each do |achievement| %>
-      <tr>
-        <td><%= check_box_tag "moo", true, true %></td>
-        <td><%= achievement.description %></td>
-        <td><%= achievement.point_value %></td>
-      </tr>
+
+    <%= form_tag update_achievements_teacher_path do %>
+      <% @students.each do |student| %>
+        <tr><td>
+          <h1>Edit Achievements for <%= student.name %></h1>
+        </td></tr>
+
+        <% @achievements.each do |achievement| %>
+          <tr>
+            <td><%= check_box_tag "tags[#{achievement.id}]", true, student.achievements.include?(achievement) %></td>
+            <td><%= achievement.description %></td>
+            <td><%= achievement.point_value %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    <%= submit_tag "Save Tags" %>
     <% end %>
   </tbody>
 </table>

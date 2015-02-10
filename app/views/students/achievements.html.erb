@@ -2,8 +2,20 @@
 
 <table>
   <tbody>
-    <tr>
-      <%= display_achievements(Achievement.all) %>
-    </tr>
+
+    <%= form_tag update_achievements_student_path do %>
+
+
+        <% @achievements.each do |achievement| %>
+          <tr>
+            <td><%= check_box_tag "achievements[#{achievement.id}]", true, @student.achievements.include?(achievement) %></td>
+            <td><%= achievement.description %></td>
+            <td><%= achievement.point_value %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    <%= submit_tag "Save Tags" %>
   </tbody>
 </table>
+
+<%= link_to 'Back', teachers_path %>

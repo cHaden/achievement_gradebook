@@ -1,15 +1,15 @@
 <h1>Teacher Dashboard</h1>
 
 <%= link_to 'Create new achievement', new_achievement_path %><br><br>
-<%= link_to "Assign achievement", teachers_achievements_path %>
+
 
 <table>
   <tbody>
       <% Student.get_all_children_for_teacher_id( session[:teacher_id] ).each do |student| %>
         <tr><td><%=  student.name  %></td></tr>
+        <tr><td><%= link_to "Assign achievement", edit_achievements_student_path(student) %></td></tr>
 
-        <%= display_achievements(Achievement.all) %>
-
+        <%= display_achievements_for(student) %>
       <% end %>
   </tbody>
 </table>

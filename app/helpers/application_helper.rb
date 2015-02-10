@@ -20,4 +20,15 @@ module ApplicationHelper
     result.html_safe
   end
 
+  def display_achievements_for( student )
+    result = ""
+    student.achievements.each do |achievement|
+      result << "<tr>"
+      result << "<td>#{achievement.description}</td>"
+      result << "<td>#{ achievement.point_value }</td>"
+      result << "</tr>"
+    end
+    result.html_safe
+  end
+
 end

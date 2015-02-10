@@ -3,7 +3,7 @@ class Student < ActiveRecord::Base
 
   has_many :parents
 
-  has_and_belongs_to_many :achievement
+  has_and_belongs_to_many :achievements
 
 
   belongs_to :teacher
